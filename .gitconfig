@@ -1,0 +1,9 @@
+[user]
+	name = Eric Lemings
+	email = eric@lemings.com
+[color]
+	ui = auto
+[core]
+	editor = vim
+;[init]
+	;templatedir = ~/Developer/Library/git

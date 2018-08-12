@@ -9,7 +9,7 @@ fi
 if [ -d ~/.bashrc.d ]; then
   for i in ${HOME}/.bashrc.d/*.sh; do
     if [ -r "$i" ]; then
-      if [ "$PS1" ]; then
+      if [ "${-#*i}" != "$-" ]; then
         . "$i"
       else
         . "$i" >/dev/null 2>&1
@@ -18,3 +18,4 @@ if [ -d ~/.bashrc.d ]; then
   done
   unset i
 fi
+
