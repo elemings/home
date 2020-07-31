@@ -1,0 +1,25 @@
+[user]
+	email = my.email@address.com
+	name = Eric Lemings
+	signingkey = DEADBEEF
+[color]
+	ui = auto
+[core]
+	editor = vim
+[push]
+	gpgsign = if-asked
+	default = simple
+[diff]
+	tool = bc3
+[difftool "bc3"]
+	trustExitCode = true
+[difftool]
+	prompt = false
+[merge]
+	tool = bc3
+[mergetool "bc3"]
+	trustExitCode = true
+[commit]
+	gpgsign = true
+[tag]
+	pgpsign = true
