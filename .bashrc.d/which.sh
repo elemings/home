@@ -7,9 +7,3 @@ if [ 'Linux' = `uname` ]; then
   fi
 fi
 
-alias whicha='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
-
-whichf() {
-  declare -f | /usr/bin/which --read-functions $@
-}
-

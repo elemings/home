@@ -5,9 +5,13 @@ if [ -d /proc ]; then
   # Show environment of a pid.
   # $1: pid from /proc
   procenv() {
-    if [ -n $1 -a -r /proc/$1/environ ]; then
-      cat /proc/$1/environ |sed 's/\x0/\n/g'
-    fi
+    local pid
+    for pid in $*
+    do
+      if [ -n $pid -a -r /proc/$pid/environ ]; then
+        cat /proc/$pid/environ |sed 's/\x0/\n/g'
+      fi
+    done
   }
 
 fi

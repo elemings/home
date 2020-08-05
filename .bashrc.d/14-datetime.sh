@@ -54,3 +54,5 @@ dts() {
   echo ${yd}-${sc}
 }
 
+alias dt="date +%Y%b%d-%H%M%S"
+

@@ -6,15 +6,16 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # User specific aliases and functions
-
-for i in ${HOME}/.bashrc.d/*.sh; do
-  if [ -r "$i" ]; then
-    if [ "$PS1" ]; then
-      . "$i"
-    else
-      . "$i" >/dev/null 2>&1
+if [ -d ${HOME}/.bashrc.d ]; then
+  for i in ${HOME}/.bashrc.d/*.sh; do
+    if [ -r "$i" ]; then
+      if [ "$PS1" ]; then
+        . "$i"
+      else
+        . "$i" >/dev/null 2>&1
+      fi
     fi
-  fi
-done
-unset i
+  done
+  unset i
+fi
 
